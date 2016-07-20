@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="setGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loC-98-iTI">
+                                <rect key="frame" x="20" y="40" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="msc-dF-SmD">
+                                <rect key="frame" x="20" y="112" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZl-xQ-yVh">
+                                <rect key="frame" x="20" y="168" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBf-r1-KqB">
+                                <rect key="frame" x="247" y="253" width="107" height="30"/>
+                                <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="creatAccountAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5x-jo-wdL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yn2-as-tNZ">
+                                <rect key="frame" x="276" y="489" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ui4-Kl-acc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riG-NA-WE3">
+                                <rect key="frame" x="281" y="303" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="by6-2j-qu1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-F5-6hQ" customClass="GADBannerView">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eeF-1L-yGn"/>
+                                    <constraint firstAttribute="width" constant="320" id="wQe-ax-6fG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="riG-NA-WE3" firstAttribute="top" secondItem="eBf-r1-KqB" secondAttribute="bottom" constant="20" id="1Rc-p1-WUj"/>
+                            <constraint firstItem="msc-dF-SmD" firstAttribute="trailing" secondItem="lZl-xQ-yVh" secondAttribute="trailing" id="1g9-h4-LcS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yn2-as-tNZ" secondAttribute="bottom" constant="81" id="39c-Nv-C1l"/>
+                            <constraint firstItem="loC-98-iTI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3wb-7T-JpX"/>
+                            <constraint firstItem="NTC-F5-6hQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5b5-Zy-omt"/>
+                            <constraint firstItem="loC-98-iTI" firstAttribute="trailing" secondItem="msc-dF-SmD" secondAttribute="trailing" id="B4e-56-Iwf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NTC-F5-6hQ" secondAttribute="bottom" id="Dyd-lD-bxh"/>
+                            <constraint firstItem="msc-dF-SmD" firstAttribute="top" secondItem="loC-98-iTI" secondAttribute="bottom" constant="51" id="GFm-tp-KAp"/>
+                            <constraint firstItem="loC-98-iTI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="JzP-fM-ulf"/>
+                            <constraint firstItem="lZl-xQ-yVh" firstAttribute="centerX" secondItem="eBf-r1-KqB" secondAttribute="centerX" id="Ldv-wR-ltk"/>
+                            <constraint firstItem="loC-98-iTI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="M7P-MP-7GT"/>
+                            <constraint firstItem="loC-98-iTI" firstAttribute="leading" secondItem="msc-dF-SmD" secondAttribute="leading" id="N9r-BR-zvu"/>
+                            <constraint firstItem="riG-NA-WE3" firstAttribute="centerX" secondItem="yn2-as-tNZ" secondAttribute="centerX" id="Ns8-ym-mMx"/>
+                            <constraint firstItem="msc-dF-SmD" firstAttribute="leading" secondItem="lZl-xQ-yVh" secondAttribute="leading" id="PdR-4D-VBv"/>
+                            <constraint firstItem="lZl-xQ-yVh" firstAttribute="top" secondItem="msc-dF-SmD" secondAttribute="bottom" constant="26" id="R5b-wf-xki"/>
+                            <constraint firstItem="eBf-r1-KqB" firstAttribute="top" secondItem="lZl-xQ-yVh" secondAttribute="bottom" constant="55" id="vhx-OC-lxm"/>
+                            <constraint firstItem="eBf-r1-KqB" firstAttribute="centerX" secondItem="riG-NA-WE3" secondAttribute="centerX" id="y26-hZ-QAb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="NTC-F5-6hQ" id="hJH-QS-3ys"/>
+                        <outlet property="emailField" destination="msc-dF-SmD" id="FRS-Yl-U8B"/>
+                        <outlet property="loginButton" destination="riG-NA-WE3" id="OLv-33-54f"/>
+                        <outlet property="logoutButton" destination="yn2-as-tNZ" id="qPh-5C-2YF"/>
+                        <outlet property="passwordField" destination="lZl-xQ-yVh" id="tNb-xb-0tS"/>
+                        <outlet property="usernameLabel" destination="loC-98-iTI" id="xOc-9J-pIk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="337"/>
+        </scene>
+    </scenes>
+</document>
