@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
-class ViewController: UIViewController, GADBannerViewDelegate {
+class ViewController: UIViewController, GADBannerViewDelegate, GIDSignInDelegate, GIDSignInUIDelegate {
 
     
     @IBOutlet weak var bannerView: GADBannerView!
@@ -50,6 +51,9 @@ class ViewController: UIViewController, GADBannerViewDelegate {
             self.usernameLabel.text = ""
         }
     
+        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,8 +74,10 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         }
             
         else{
+            // Firebase.authen
             FIRAuth.auth()?.createUserWithEmail(self.emailField.text!, password: self.passwordField.text!, completion: { (user, error) in
                 if error == nil{
+                    // 
                     self.logoutButton.alpha = 1.0
                     self.usernameLabel.text = user!.email
                     self.emailField.text = ""
@@ -129,6 +135,36 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         self.emailField.text = ""
         self.passwordField.text = ""
     }
-
+    
+    
+    // Google login controll
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        let authentication = user.authentication
+        let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken, accessToken: authentication.accessToken)
+        
+        FIRAuth.auth()?.signInWithCredential(credential, completion: { (user, error) in
+            if error != nil {
+                print(error?.localizedDescription)
+                return
+            }
+            
+            print("User logged in with Google")
+            
+        })
+    }
+    
+    // google logout controll
+    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user: GIDGoogleUser!, withError error: NSError!) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        try! FIRAuth.auth()!.signOut()
+    }
 }
 

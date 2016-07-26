@@ -41,13 +41,6 @@
                                     <action selector="creatAccountAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5x-jo-wdL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yn2-as-tNZ">
-                                <rect key="frame" x="276" y="489" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logoutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ui4-Kl-acc"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riG-NA-WE3">
                                 <rect key="frame" x="281" y="303" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
@@ -63,6 +56,21 @@
                                     <constraint firstAttribute="width" constant="320" id="wQe-ax-6fG"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTZ-OJ-WGo" customClass="GIDSignInButton">
+                                <rect key="frame" x="238" y="350" width="125" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="HTW-sX-7fr"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ugd-he-kT0"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yn2-as-tNZ">
+                                <rect key="frame" x="276" y="489" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ui4-Kl-acc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -75,12 +83,17 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NTC-F5-6hQ" secondAttribute="bottom" id="Dyd-lD-bxh"/>
                             <constraint firstItem="msc-dF-SmD" firstAttribute="top" secondItem="loC-98-iTI" secondAttribute="bottom" constant="51" id="GFm-tp-KAp"/>
                             <constraint firstItem="loC-98-iTI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="JzP-fM-ulf"/>
+                            <constraint firstItem="kTZ-OJ-WGo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kk3-pH-UTm"/>
                             <constraint firstItem="lZl-xQ-yVh" firstAttribute="centerX" secondItem="eBf-r1-KqB" secondAttribute="centerX" id="Ldv-wR-ltk"/>
                             <constraint firstItem="loC-98-iTI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="M7P-MP-7GT"/>
                             <constraint firstItem="loC-98-iTI" firstAttribute="leading" secondItem="msc-dF-SmD" secondAttribute="leading" id="N9r-BR-zvu"/>
                             <constraint firstItem="riG-NA-WE3" firstAttribute="centerX" secondItem="yn2-as-tNZ" secondAttribute="centerX" id="Ns8-ym-mMx"/>
                             <constraint firstItem="msc-dF-SmD" firstAttribute="leading" secondItem="lZl-xQ-yVh" secondAttribute="leading" id="PdR-4D-VBv"/>
                             <constraint firstItem="lZl-xQ-yVh" firstAttribute="top" secondItem="msc-dF-SmD" secondAttribute="bottom" constant="26" id="R5b-wf-xki"/>
+                            <constraint firstItem="yn2-as-tNZ" firstAttribute="top" secondItem="kTZ-OJ-WGo" secondAttribute="bottom" constant="89" id="ZOi-av-3A3"/>
+                            <constraint firstItem="kTZ-OJ-WGo" firstAttribute="top" secondItem="riG-NA-WE3" secondAttribute="bottom" constant="17" id="aeF-1r-dbI"/>
+                            <constraint firstItem="kTZ-OJ-WGo" firstAttribute="centerX" secondItem="riG-NA-WE3" secondAttribute="centerX" id="elp-Mb-Wfb"/>
+                            <constraint firstItem="NTC-F5-6hQ" firstAttribute="top" secondItem="yn2-as-tNZ" secondAttribute="bottom" constant="31" id="qZ2-3T-9dA"/>
                             <constraint firstItem="eBf-r1-KqB" firstAttribute="top" secondItem="lZl-xQ-yVh" secondAttribute="bottom" constant="55" id="vhx-OC-lxm"/>
                             <constraint firstItem="eBf-r1-KqB" firstAttribute="centerX" secondItem="riG-NA-WE3" secondAttribute="centerX" id="y26-hZ-QAb"/>
                         </constraints>

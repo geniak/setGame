@@ -26,6 +26,7 @@
 		A27D3F7A1D36B17F00651CA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A27D3F7C1D36B17F00651CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A27D3F821D36B1C600651CA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2E442FD1D47B31C00900361 /* setGame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "setGame-Bridging-Header.h"; sourceTree = "<group>"; };
 		E4B80BEB7E6CD657B6611AB7 /* Pods-setGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-setGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-setGame/Pods-setGame.debug.xcconfig"; sourceTree = "<group>"; };
 		ECBD24D59BA29D57F7439B6F /* Pods-setGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-setGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-setGame/Pods-setGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +79,7 @@
 				A27D3F791D36B17F00651CA7 /* LaunchScreen.storyboard */,
 				A27D3F7C1D36B17F00651CA7 /* Info.plist */,
 				A27D3F821D36B1C600651CA7 /* GoogleService-Info.plist */,
+				A2E442FD1D47B31C00900361 /* setGame-Bridging-Header.h */,
 			);
 			path = setGame;
 			sourceTree = "<group>";
@@ -329,10 +331,13 @@
 			baseConfigurationReference = E4B80BEB7E6CD657B6611AB7 /* Pods-setGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = setGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Geniak.setGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "setGame/setGame-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -341,10 +346,12 @@
 			baseConfigurationReference = ECBD24D59BA29D57F7439B6F /* Pods-setGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = setGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Geniak.setGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "setGame/setGame-Bridging-Header.h";
 			};
 			name = Release;
 		};

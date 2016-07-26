@@ -13,4 +13,5 @@ pod 'Firebase/Database'
 pod 'Firebase/Messaging'
 pod 'Firebase/RemoteConfig'
 pod 'Firebase/AdMob'
+pod 'GoogleSignIn'
 end
